@@ -7,7 +7,7 @@ export default async function Projectspage() {
   return (
     <section id="projects" className="py-12 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">
+        <h2 className="text-3xl font-bold items-center text-center mb-12 relative inline-block after:absolute after:w-20 after:h-1 after:bg-primary after:left-1/2 after:-translate-x-1/2 after:-bottom-2">
           My Projects
         </h2>
 

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "MHR Habib | Full Stack MERN & SQL Developer",
     description:
       "Visit the portfolio of MHR Habib — MERN & SQL expert building robust and scalable full stack web apps using React, Node.js, SQL, and Next.js.",
-    url: "https://yourdomain.com",
+    url: "https://mhrhabibdev.vercel.app",
     siteName: "MHR Habib Portfolio",
     images: [
       {

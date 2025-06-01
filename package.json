@@ -6,11 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean": "rimraf .next && rimraf node_modules/.cache"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.13",
     "@radix-ui/react-slot": "^1.2.2",
+    "@tailwindcss/typography": "^0.5.16",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.11.3",
@@ -33,6 +35,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
     "prettier": "3.5.3",
+    "rimraf": "^6.0.1",
     "tailwindcss": "^4",
     "tw-animate-css": "^1.2.9",
     "typescript": "^5"

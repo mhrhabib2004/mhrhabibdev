@@ -2,8 +2,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
-type TBlog = {
+// Optional: For sanitizing content (only if HTML comes from untrusted source)
+// import DOMPurify from 'dompurify';
+
+export type TBlog = {
   _id?: string;
   title: string;
   content: string;
@@ -39,15 +43,16 @@ export default function BlogsDetails({ blog }: BlogsDetailsProps) {
         </CardHeader>
 
         <CardContent className="text-sm text-muted-foreground leading-7 space-y-3">
-          {blog.content?.split("\n").map((para, i) => (
-            <p key={i}>{para}</p>
-          ))}
+          <div
+            className="prose prose-sm sm:prose-base max-w-none"
+            dangerouslySetInnerHTML={{ __html: blog.content }}
+          />
         </CardContent>
       </Card>
 
       <div className="mt-6 flex justify-end">
         <Button variant="outline" asChild>
-          <a href="/blogs">Back to Blogs</a>
+          <Link href="/blogs">Back to Blogs</Link>
         </Button>
       </div>
     </div>
